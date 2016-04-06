@@ -1,0 +1,52 @@
+<html>
+    <body>
+        <div class='count-down'></div>
+        <div class='count-down1'></div>
+        <!-- include jQuery-->
+        <script type="text/javascript" src='scriptjquery-1.12.2.min.js'></script>
+        <!-- include countdown-timer jQuery plugin-->
+        <script type="text/javascript" src='jquery.countdown-timer.js'></script>
+        <script type="text/javascript">
+            
+            $(function(){
+                //call countdown timer with some options
+                $('.count-down').CountDown({
+                    // specify end time for countdown timer to stop
+                    endTime:'2016-04-10 08:57:00',
+                    /*
+                    a format for timmer, these are supported - 
+                    {w} = week(s)
+                    {d} = Day(s)
+                    {h} = hour(s)
+                    {m} = Minute(s)
+                    {s} = Second(s)
+                    */
+                    format:'{h}h {m}m {s}s',
+                    // A call back function when countdown is completed
+                    onComplete:function(){
+                        alert('count-down completed');
+                    }
+                });
+                // yes you can have multipe instants
+                $('.count-down1').CountDown({
+                    // specify end time for countdown timer to stop
+                    endTime:'2016-04-10 08:57:00',
+                    /*
+                    a format for timmer, these are supported - 
+                    {w} = week(s)
+                    {d} = Day(s)
+                    {h} = hour(s)
+                    {m} = Minute(s)
+                    {s} = Second(s)
+                    */
+                    format:'{w}w {d}d {h}h {m}m {s}s',
+                    // A call back function when countdown is completed
+                    onComplete:function(){
+                        alert('count-down completed');
+                    }
+                });
+                
+            });
+        </script>
+    </body>
+</html>
